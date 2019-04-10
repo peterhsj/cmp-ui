@@ -12,7 +12,7 @@
             <span>导航一</span>
           </template>
           <el-menu-item-group class="over-hide">
-            <el-menu-item index="1-1">选项1</el-menu-item>
+            <el-menu-item><router-link to="/aaa">Main</router-link></el-menu-item>
             <el-menu-item index="1-2">选项2</el-menu-item>
             <el-menu-item index="1-3">选项3</el-menu-item>
             <el-menu-item index="1-4">选项4</el-menu-item>
