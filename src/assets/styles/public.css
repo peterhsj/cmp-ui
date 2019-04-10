@@ -1,0 +1,47 @@
+.el-header {
+  background-color: #B3C0D1;
+  color: #333;
+  text-align: center;
+  height: 60px;
+  width: 100%;
+}
+
+.el-footer {
+  background-color: #B3C0D1;
+  color: #333;
+  text-align: center;
+  height: 60px;
+  width: 100%;
+}
+
+.el-aside {
+  background-color: #D3DCE6;
+  height: 100%;
+}
+
+.el-main {
+  background-color: #E9EEF3;
+  color: #333;
+  text-align: center;
+  height: calc(100% - 60px);
+  /* width: 100%; */
+}
+
+/* body>.el-container {
+  margin-bottom: 40px;
+} */
+
+.mainPage {
+  flex-wrap: wrap;
+  height: 100%;
+}
+ 
+.containPage {
+  flex-wrap: wrap;
+  height: calc(100% - 60px);
+}
+
+.contain {
+  flex-wrap: wrap;
+  height: 100%;
+}
