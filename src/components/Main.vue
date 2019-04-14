@@ -10,7 +10,7 @@
 
   <body>
     <div>
-      <p><a href="#" @click.prevent="login">login</a></p>
+      <p><a href="#" @click.prevent="Home">HOME</a></p>
     </div>
   </body>
 
@@ -20,15 +20,15 @@
 <script>
   import router from '../router/router'
   export default {
-    name: 'login',
+    name: 'Main',
     data: function () {
       return {
         url: ''
       }
     },
     methods: {
-      login: function () {
-        router.push('/Main')
+      Home: function () {
+        router.push('/Dashboard')
       }
     }
   }

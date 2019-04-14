@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from "@/components/Login"
+import Main from "@/components/Main"
 import Home from "@/components/Home"
-import Main from "@/components/pages/Main"
+import Dashboard from "@/components/pages/Dashboard"
 import aaa from "@/components/pages/aaa"
 
 Vue.use(Router)
@@ -13,8 +13,8 @@ const router =  new Router({
   routes: [
     {
       path: '/',
-      name: 'Login',
-      component: Login
+      name: 'Main',
+      component: Main
     },
     {
       path: '/Home',
@@ -22,9 +22,9 @@ const router =  new Router({
       component: Home,
       children: [
         {
-          path: '/Main',
-          name: 'Main',
-          component: Main
+          path: '/Dashboard',
+          name: 'Dashboard',
+          component: Dashboard
         },
         {
           path: '/aaa',

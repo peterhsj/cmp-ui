@@ -1,10 +1,10 @@
 <template>
-    <el-main>Main</el-main>
+    <el-main>Dashboard</el-main>
 </template>
 
 <script>
     export default {
-        name: "HomeMain"
+        name: "Dashboard"
     }
 </script>
 

@@ -6,7 +6,6 @@
                 <home-aside></home-aside>
             </el-aside>
             <el-container class="contain">
-                <!-- <home-main></home-main> -->
                 <router-view></router-view>
                 <home-footer></home-footer>
             </el-container>
