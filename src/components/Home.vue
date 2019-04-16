@@ -3,7 +3,7 @@
         <home-header></home-header>
         <el-container class="containPage">
             <el-aside width="200px">
-                <home-aside></home-aside>
+                <main-menu></main-menu>
             </el-aside>
             <el-container class="contain">
                 <router-view></router-view>
@@ -15,14 +15,14 @@
 
 <script>
     import HomeHeader from "@/components/Header";
-    import HomeAside from "@/components/Aside";
+    import MainMenu from "@/components/MainMenu.vue";
     import HomeFooter from "@/components/Footer";
 
     export default {
         name: "Home",
         components: {
             HomeHeader,
-            HomeAside,
+            MainMenu,
             HomeFooter
         }
     }
