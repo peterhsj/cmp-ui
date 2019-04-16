@@ -32,6 +32,10 @@ const router =  new Router({
           component: aaa
         }
       ]
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 })

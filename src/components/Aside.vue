@@ -24,13 +24,13 @@
       <el-menu
         default-active="1"
         class="el-menu-vertical-demo"
-        @open="handleOpen"
-        @close="handleClose"
       >
-        <el-menu-item index="1">
-          <i class="el-icon-menu"></i>
-          <span slot="title"><router-link to="/DashBoard">首頁</router-link></span>
-        </el-menu-item>
+        <router-link :to="{path:'/DashBoard'}" tag="span">
+          <el-menu-item index="DashBoard">
+            <i class="el-icon-menu"></i>
+            <span slot="title">首頁</span>
+          </el-menu-item>
+        </router-link>
         <el-submenu index="2">
           <template slot="title">
             <i class="el-icon-location"></i>
