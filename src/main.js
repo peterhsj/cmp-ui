@@ -1,22 +1,31 @@
 import Vue from 'vue'
-import VueI18n from 'vue-i18n'
-import ElementUI from 'element-ui'
+import App from './App.vue'
+// import VueI18n from 'vue-i18n'
 // import enLocale from 'element-ui/lib/locale/lang/en'
 // import cnLocale from 'element-ui/lib/locale/lang/zh-CN'
 // import twLocale from 'element-ui/lib/locale/lang/zh-TW'
 // import Locales from 'element-ui/lib/locale'
-import App from './App.vue'
 import router from './router/router'
 import store from './store/store'
-import './assets/styles/reset.css'
-// import './assets/styles/border.css'
-import './assets/styles/public.css'
+// ElementUI
+import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+// Default setting
+import './assets/styles/reset.css'
+import './assets/styles/border.css'
+import './assets/styles/public.css'
 
+// vue-fontawesome
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+// library.add(faCoffee)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+// Vue.use(VueI18n)
+Vue.use(ElementUI)
 Vue.config.productionTip = false
 
-Vue.use(VueI18n)
-Vue.use(ElementUI)
 
 // Vue.config.lang = 'zh-CN'
 // Vue.locale('zh-CN', cnLocale)
@@ -44,7 +53,11 @@ Vue.use(ElementUI)
 // })
 
 new Vue({
+  el: '#app',
   router,
   store,
-  render: h => h(App),
-}).$mount('#app')
+  template: '<App/>',
+  components: { App },
+  render: h => h(App)
+})
+// .$mount('#app')
