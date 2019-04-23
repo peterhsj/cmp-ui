@@ -6,10 +6,8 @@
     <title>CMP</title>
   </head>
 
-  <body>
-    
+  <body>    
     <home-header></home-header>
-
     <el-container>
       <el-main>
         <template>
@@ -58,15 +56,15 @@
             <div class="footerItem news">
               <h3>公司动态</h3>
               <p v-for="(newsItem, index) in news" :key="index">
-                <a :href="'/' + newsItem.url" target="_blank">{{ newsItem.author }}｜{{ newsItem.title }}</a>
+                <a href="#" @click.prevent="newsLink(newsItem.url)">{{ newsItem.author }}｜{{ newsItem.title }}</a>
               </p>              
             </div>
           </div>
           <div class="commonCopy">
             <p>
-              <a href="#">法律聲明及隱私受權</a>
+              <a href="#">法律聲明及隱私權</a>
               <span style="padding: 0 8px">|</span>
-              <span class="copyright">© 2019 CMP.com</span>
+              <span class="copyright">© 2019 Chinook.com</span>
             </p>
             
           </div>
@@ -75,9 +73,6 @@
     </el-container>
 
     <div>
-      <p>
-        <a href="#" @click.prevent="Home">HOME</a>
-      </p>
     </div>
   </body>
 </html>
@@ -90,7 +85,7 @@ library.add(faCoffee);
 import HomeHeader from "@/components/Header";
 import router from "../router/router";
 export default {
-  name: "Main",
+  name: "Home",
   components: {
     HomeHeader
     // HomeFooter
@@ -99,27 +94,27 @@ export default {
     return {
       news: [
         {
-          url: '',
+          url: '/home',
           author: '公告',
           title: '稷風一贯遵循法律合法经营'
         },
         {
-          url: '',
+          url: '/home',
           author: '钛媒体',
           title: '稷風完成新一轮近10亿融资，用于推进门店互联网化'
         },
         {
-          url: '',
+          url: '/home',
           author: '亿邦',
           title: '稷風小程序接入“好物圈” 为商家增加曝光'
         },
         {
-          url: '',
+          url: '/home',
           author: '亿邦',
           title: '引入5万开发者 有稷風帮商家实现“店铺定制组装'
         },
         {
-          url: '',
+          url: '/home',
           author: '红商',
           title: '互联网品牌怎么玩稷風？从舒淇的“KiKi面”说起'
         }
@@ -127,8 +122,8 @@ export default {
     };
   },
   methods: {
-    Home: function() {
-      router.push("/Dashboard");
+    newsLink: function(url) {
+      router.push(url);
     },
     changeLang(command) {
       this.currentLang = command;
@@ -154,10 +149,12 @@ export default {
 
   .el-carousel__item:nth-child(2n) {
     background-color: #99a9bf;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1) inset;
   }
 
   .el-carousel__item:nth-child(2n + 1) {
     background-color: #d3dce6;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1) inset;
   }
 }
 
@@ -192,7 +189,7 @@ export default {
       color: #666666;
       letter-spacing: 0.58px;
       &:hover {
-        color: #333333;
+        color: #000000;
       }
     }
     .product a {
@@ -208,13 +205,18 @@ export default {
     border-top: 1px solid rgba(229, 229, 229, 0.8);
     padding: 30px 0;
     color: #b6b6b6;
+    a {
+      &:hover {
+        color: #333333;
+      }
+    }
   }
   .cmpCode {
     width: 70px;
     height: 70px;
     background-size: cover;
     background-position: center;
-    background: #666666 url(../assets/qr.png) no-repeat;
+    background: #666666 url(../assets/images/qr.png) no-repeat;
     border: 1px solid #666666;
   }
   .copyright {
