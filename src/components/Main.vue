@@ -1,6 +1,8 @@
 <template>
     <el-container class="mainPage">
-        <home-header></home-header>
+        <!-- <div class="headerWrapper"> -->
+            <home-header></home-header>
+        <!-- </div> -->
         <el-container class="containPage">
             <el-aside width="200px">
                 <main-menu></main-menu>

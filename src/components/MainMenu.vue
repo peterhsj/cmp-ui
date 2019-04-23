@@ -21,6 +21,7 @@
             </el-menu-item-group>
         </el-submenu>
       </el-menu-->
+      <el-scrollbar wrap-class="list" view-style="font-weight: bold;" view-class="view-box" :native="false">
       <el-menu
         default-active="DashBoard"
         class="el-menu-vertical-demo"
@@ -92,6 +93,7 @@
           <span slot="title">导航四</span>
         </el-menu-item> -->
       </el-menu>
+      </el-scrollbar>
     </el-col>
   </el-row>
 </template>
